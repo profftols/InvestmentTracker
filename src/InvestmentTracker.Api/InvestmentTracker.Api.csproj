@@ -16,4 +16,8 @@
       <Folder Include="Middleware\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\InvestmentTracker.Infrastructure\InvestmentTracker.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
