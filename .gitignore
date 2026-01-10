@@ -1,8 +1,7 @@
-# --- Стандартные папки сборки (Build results) ---
+
 [Bb]in/
 [Oo]bj/
 
-# --- Настройки IDE (Rider / Visual Studio / VS Code) ---
 .idea/
 .vs/
 .vscode/
@@ -10,19 +9,14 @@
 *.suo
 *.userprefs
 
-# --- Кэши и временные файлы ---
 _ReSharper*/
 *.pidb
 *.resources
 *.cache
 
-# --- Секреты и локальные настройки (Твой пункт) ---
-# Игнорируем конфиг разработки, где будет твой IP
 **/appsettings.Development.json
 
-# Игнорируем UserSecrets (на всякий случай)
 **/secrets.json
 
-# --- OS ---
 Thumbs.db
 .DS_Store
