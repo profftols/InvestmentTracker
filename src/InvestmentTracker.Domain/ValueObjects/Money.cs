@@ -15,7 +15,7 @@ public readonly struct Money(decimal value, string currency)
         
         return new Money(left.Value + right.Value, left.Currency);
     }
-
+    
     public static Money operator -(Money left, Money right)
     {
         if (left.Currency != right.Currency)
