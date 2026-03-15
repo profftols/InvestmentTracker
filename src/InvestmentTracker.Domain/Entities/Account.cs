@@ -1,5 +1,4 @@
-﻿using System.Data;
-using InvestmentTracker.Domain.Enums;
+﻿using InvestmentTracker.Domain.Enums;
 using InvestmentTracker.Domain.ValueObjects;
 
 namespace InvestmentTracker.Domain.Entities;
@@ -18,7 +17,7 @@ public class Account
         CreatedAt = DateTime.UtcNow;
     }
 
-    public readonly DateTime CreatedAt;
+    public DateTime CreatedAt { get; private set; }
     public Guid Id { get; private set; }
     public string Name { get; private set;}
     public AccountType Type { get; private set; }

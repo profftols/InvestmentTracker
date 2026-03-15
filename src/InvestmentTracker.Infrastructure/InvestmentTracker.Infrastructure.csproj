@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <Folder Include="BackgroundJobs\" />
-      <Folder Include="Data\" />
       <Folder Include="Integrations\Bybit\" />
       <Folder Include="Integrations\Tinkoff\" />
     </ItemGroup>
