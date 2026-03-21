@@ -5,5 +5,9 @@ namespace InvestmentTracker.Infrastructure.Data;
 
 public class ApplicationDbContext : DbContext
 {
-    public DbSet<Account> Accounts { get; private set; }
+    public ApplicationDbContext(DbContextOptions options) : base(options)
+    {
+    }
+
+    public DbSet<Account> Accounts { get; set; }
 }
