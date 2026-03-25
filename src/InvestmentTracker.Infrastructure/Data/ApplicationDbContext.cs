@@ -10,4 +10,6 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Account> Accounts { get; set; }
+    public DbSet<Transaction> Transactions { get; set; }
+    public DbSet<PortfolioSnapshot> PortfolioSnapshots { get; set; }
 }
