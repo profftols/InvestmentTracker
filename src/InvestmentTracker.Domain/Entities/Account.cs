@@ -1,10 +1,12 @@
-﻿using InvestmentTracker.Domain.Enums;
+﻿using System.ComponentModel.DataAnnotations;
+using InvestmentTracker.Domain.Enums;
 using InvestmentTracker.Domain.ValueObjects;
 
 namespace InvestmentTracker.Domain.Entities;
 
 public class Account
 {
+    // ReSharper disable once UnusedMember.Local
     private Account(){}
     
     public Account(string name, AccountType type, Money money)
@@ -19,7 +21,9 @@ public class Account
 
     public DateTime CreatedAt { get; private set; }
     public Guid Id { get; private set; }
-    public string Name { get; private set;}
+    
+    [MaxLength(100)]
+    public string? Name { get; private set;}
     public AccountType Type { get; private set; }
     public Money CurrentBalance { get; private set; }
     public Money TotalInvested { get; private set; }
