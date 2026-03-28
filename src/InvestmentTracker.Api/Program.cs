@@ -19,8 +19,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapGet("/total-invested", (PortfolioService portfolioService) =>
-{
-})
+    {
+        var user = portfolioService;
+        Console.WriteLine(user);
+    })
 .WithName("GetTotalInvestedAmount");
 
 
