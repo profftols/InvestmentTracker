@@ -13,7 +13,6 @@ public class PortfolioService
 
     public async Task<decimal> GetTotalInvestedAmountAsync()
     {
-        var result = await _repository.GetAll();
-        return result.Sum(account => account.TotalInvested.Value);
+        return await _repository.GetTotalInvestedAsync();
     }
 }
