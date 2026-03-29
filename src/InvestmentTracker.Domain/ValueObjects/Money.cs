@@ -1,6 +1,6 @@
 ﻿namespace InvestmentTracker.Domain.ValueObjects;
 
-public readonly struct Money(decimal value, string currency)
+public record Money(decimal value, string currency)
 {
     public decimal Value { get; } = value;
     public string Currency { get; } = currency.ToUpperInvariant();
