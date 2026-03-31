@@ -1,10 +1,14 @@
 using InvestmentTracker.Application.Services;
+using InvestmentTracker.Domain.Interfaces;
+using InvestmentTracker.Infrastructure.Data;
+using InvestmentTracker.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped<PortfolioService>();
-
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<ApplicationDbContext>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -19,11 +23,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapGet("/total-invested", (PortfolioService portfolioService) =>
-    {
-        var user = portfolioService;
-        Console.WriteLine(user);
-    })
-.WithName("GetTotalInvestedAmount");
-
-
-app.Run();
+{
+    return portfolioService.GetTotalInvestedAmountAsync();
+});
