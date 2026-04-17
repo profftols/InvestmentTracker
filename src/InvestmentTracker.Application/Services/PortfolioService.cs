@@ -2,7 +2,7 @@
 
 namespace InvestmentTracker.Application.Services;
 
-public class PortfolioService
+public class PortfolioService : IPortfolioService
 {
     private readonly IAccountRepository _repository;
 
